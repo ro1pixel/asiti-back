@@ -1,0 +1,27 @@
+// import { Sequelize } from 'sequelize-typescript'
+// import aws from './utils/aws'
+// import { dbConfig } from './utils/env'
+
+// const parameters = aws.ps.getParametersByPathSync(dbConfig, {
+//   accessKeyId: process.env.AWS_ACCESS_KEY,
+//   secretAccessKey: process.env.AWS_SECRET_KEY,
+//   region: 'eu-central-1',
+// })
+
+// const database = parameters.find((x) => x.Name == `${dbConfig}/db-name`)?.Value
+// const username = parameters.find((x) => x.Name == `${dbConfig}/db-username`)?.Value
+// const password = parameters.find((x) => x.Name == `${dbConfig}/db-password`)?.Value
+// const host = parameters.find((x) => x.Name == `${dbConfig}/db-url`)?.Value
+
+// export const sequelize = new Sequelize({
+//   host,
+//   database,
+//   dialect: 'postgres',
+//   username,
+//   password,
+//   models: [__dirname + '/models/*.model.*'],
+//   modelMatch: (filename, member) => {
+//     return filename.substring(0, filename.indexOf('.model')) === member.toLowerCase()
+//   },
+//   logging: false,
+// })
