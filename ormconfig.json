@@ -1,0 +1,20 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "123123!A",
+    "database": "coupley",
+    "synchronize": false,
+    "logging": false,
+    "entities": [
+       "src/models/**/*.ts"
+    ],
+    "migrations": ["migrations/**/*.ts"],
+    "subscribers": [
+       "src/subscribers/**/*.ts"
+    ],
+    "cli": {
+        "migrationsDir": "migrations"
+    }
+ }

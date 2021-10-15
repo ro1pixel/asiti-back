@@ -17,5 +17,5 @@
     "isolatedModules": true,
     "noFallthroughCasesInSwitch": true
   },
-  "exclude": ["./bin", "./dist", "db-sequelize"]
+  "exclude": ["./bin", "./dist"]
 }

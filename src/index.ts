@@ -5,6 +5,8 @@ import mercurius from "mercurius";
 import buildContext from "./context/buildContext";
 import buildAppSchema from "./schema/buildAppSchema";
 import cors from "fastify-cors";
+import typeOrm from "./type-orm";
+// import { sequelize } from "./sequelize";
 // import i18next from "i18next";
 
 // import en from "./locales/en.json";
@@ -28,6 +30,7 @@ const main = async () => {
 
   const schema = await buildAppSchema();
   //   await sequelize.sync();
+  await typeOrm();
 
   //   i18next.init({
   //     resources: { en, he },

@@ -1,0 +1,5 @@
+{
+  "development": "/maxed/dev",
+  "staging": "/maxed/stg",
+  "production": "/maxed/prd"
+}
