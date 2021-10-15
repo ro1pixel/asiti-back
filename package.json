@@ -1,0 +1,25 @@
+{
+  "name": "coupley-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ro1pixel/coupley-back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ro1pixel/coupley-back/issues"
+  },
+  "homepage": "https://github.com/ro1pixel/coupley-back#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  }
+}
