@@ -13,12 +13,12 @@
 // // const password = parameters.find((x) => x.Name == `${dbConfig}/db-password`)?.Value
 // // const host = parameters.find((x) => x.Name == `${dbConfig}/db-url`)?.Value
 
-const database = "coupley";
-const username = "postgres";
-const password = "123123!A";
-const host = "localhost";
+const database = process.env.DB_NAME // "asiti";
+const username = process.env.DB_USERNAME //"postgres";
+const password = process.env.DB_PASSWORD //"123123!A";
+const host = process.env.DB_HOST //"localhost";
 
-import { connect } from "http2";
+import { connect } from "http2"
 // export const sequelize = new Sequelize({
 //   host,
 //   database,
@@ -34,9 +34,9 @@ import { connect } from "http2";
 //   logging: false,
 // });
 
-import "reflect-metadata";
-import { createConnection } from "typeorm";
-import { User } from "./models/User";
+import "reflect-metadata"
+import { createConnection } from "typeorm"
+import { User } from "./models/User"
 
 export default async function () {
   try {
@@ -48,10 +48,10 @@ export default async function () {
       password,
       database,
       entities: [__dirname + "/models/*.ts"],
-      synchronize: false,
+      synchronize: true,
       logging: false,
-    });
+    })
   } catch {
-    throw Error("Can't connect to database");
+    throw Error("Can't connect to database")
   }
 }

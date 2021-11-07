@@ -1,5 +1,5 @@
 {
-  "name": "coupley-back",
+  "name": "asiti-back",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ro1pixel/coupley-back.git"
+    "url": "git+https://github.com/ro1pixel/asiti-back.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ro1pixel/coupley-back/issues"
+    "url": "https://github.com/ro1pixel/asiti-back/issues"
   },
-  "homepage": "https://github.com/ro1pixel/coupley-back#readme",
+  "homepage": "https://github.com/ro1pixel/asiti-back#readme",
   "devDependencies": {
     "@types/node": "^16.11.0",
     "nodemon": "^2.0.13",
