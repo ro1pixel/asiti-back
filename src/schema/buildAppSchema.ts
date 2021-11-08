@@ -1,9 +1,9 @@
-import { GraphQLSchema } from "graphql";
-import { buildSchema } from "type-graphql";
-import { TestResolver } from "../resolvers/test-resolver.resolver";
+import { GraphQLSchema } from "graphql"
+import { buildSchema } from "type-graphql"
+import { HouseholdResolver } from "../resolvers/household.resolver"
 
 export default (): Promise<GraphQLSchema> =>
   buildSchema({
-    resolvers: [TestResolver],
+    resolvers: [HouseholdResolver],
     // authChecker,
-  });
+  })

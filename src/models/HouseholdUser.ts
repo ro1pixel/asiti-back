@@ -5,14 +5,17 @@ import {
   CreateDateColumn,
   Entity,
   OneToOne,
+  PrimaryColumn,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm"
+import { UserHouseholdRole, UserHouseholdStatus } from "../utils/enums"
+import { Household } from "./Household"
 import { User } from "./User"
 
 @Entity()
 @ObjectType()
-export class Household extends BaseEntity {
+export class HouseholdUser extends BaseEntity {
   //Start default columns
   @Field(() => Int)
   @PrimaryGeneratedColumn()
@@ -27,14 +30,25 @@ export class Household extends BaseEntity {
   updatedAt: Date
   //End default columns
 
-  @Field()
+  @Field(() => Int)
   @Column()
-  title: string
+  householdId: number
 
   @Field(() => Int)
   @Column()
-  createdBy: number
+  userId: number
+
+  @Field(() => Int)
+  @Column()
+  role: UserHouseholdRole
+
+  @Field(() => Int)
+  @Column()
+  status: UserHouseholdStatus
 
   @OneToOne(() => User)
   user: User
+
+  @OneToOne(() => Household)
+  household: Household
 }

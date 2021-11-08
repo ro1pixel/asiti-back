@@ -13,10 +13,10 @@
 // // const password = parameters.find((x) => x.Name == `${dbConfig}/db-password`)?.Value
 // // const host = parameters.find((x) => x.Name == `${dbConfig}/db-url`)?.Value
 
-const database = process.env.DB_NAME // "asiti";
-const username = process.env.DB_USERNAME //"postgres";
-const password = process.env.DB_PASSWORD //"123123!A";
-const host = process.env.DB_HOST //"localhost";
+const database = process.env.DB_NAME
+const username = process.env.DB_USERNAME
+const password = process.env.DB_PASSWORD
+const host = process.env.DB_HOST
 
 import { connect } from "http2"
 // export const sequelize = new Sequelize({
@@ -48,10 +48,10 @@ export default async function () {
       password,
       database,
       entities: [__dirname + "/models/*.ts"],
-      synchronize: true,
+      synchronize: false,
       logging: false,
     })
-  } catch {
-    throw Error("Can't connect to database")
+  } catch (e) {
+    throw Error(`Can't connect to database: ${e}`)
   }
 }

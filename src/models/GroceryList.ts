@@ -5,14 +5,15 @@ import {
   CreateDateColumn,
   Entity,
   OneToOne,
+  PrimaryColumn,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm"
-import { User } from "./User"
+import { Household } from "./Household"
 
 @Entity()
 @ObjectType()
-export class Household extends BaseEntity {
+export class User extends BaseEntity {
   //Start default columns
   @Field(() => Int)
   @PrimaryGeneratedColumn()
@@ -27,14 +28,14 @@ export class Household extends BaseEntity {
   updatedAt: Date
   //End default columns
 
+  @Field(() => Int)
+  @Column()
+  householdId: number
+
   @Field()
   @Column()
   title: string
 
-  @Field(() => Int)
-  @Column()
-  createdBy: number
-
-  @OneToOne(() => User)
-  user: User
+  @OneToOne(() => Household)
+  household: Household
 }
